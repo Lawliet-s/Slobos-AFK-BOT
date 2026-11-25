@@ -63,7 +63,7 @@ function createBot() {
     host: config.server.ip,
     port: config.server.port,
     username: config['bot-account'].username,
-    version: "1.21.3", // ponytail: Hardcode to 1.21.3 to map protocol 26.3 correctly
+    version: "1.21.1", // ponytail: Reverted to 1.21.1 per user request
     viewDistance: 0, // ponytail: Saves huge RAM by not loading chunks
     checkTimeoutInterval: 60000,
     hideErrors: true
