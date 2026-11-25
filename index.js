@@ -57,7 +57,7 @@ function createBot() {
   }
   clearTimers();
 
-  console.log(`[Bot] Connecting to ${config.server.ip} (v${config.server.version})...`);
+  console.log(`[Bot] Connecting to ${config.server.ip}...`);
   
   bot = mineflayer.createBot({
     host: config.server.ip,
