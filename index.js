@@ -99,9 +99,7 @@ function createBot() {
   });
 
   bot.on('error', (err) => {
-    if (err.message.includes('version')) {
-      console.log(`[Error] Version mismatch. Check if ${config.server.version} matches server.`);
-    }
+    console.log(`[Bot Error] ${err.message}`);
   });
 }
 
