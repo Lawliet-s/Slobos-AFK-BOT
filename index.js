@@ -63,7 +63,7 @@ function createBot() {
     host: config.server.ip,
     port: config.server.port,
     username: config['bot-account'].username,
-    version: config.server.version,
+    version: false, // ponytail: Detect version automatically to avoid differentVersionError
     viewDistance: 0, // ponytail: Saves huge RAM by not loading chunks
     checkTimeoutInterval: 60000,
     hideErrors: true
@@ -72,7 +72,7 @@ function createBot() {
   bot.on('spawn', () => {
     botState.connected = true;
     botState.reconnectAttempts = 0;
-    console.log('[Bot] Online');
+    console.log(`[Bot] Online (Version: ${bot.version})`);
     
     // Simple AFK - Jump & Random Look
     activeIntervals.push(setInterval(() => {
